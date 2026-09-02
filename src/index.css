@@ -1,111 +1,406 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+/* Общие настройки */
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+* {
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
+  padding: 0;
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
+  background: #f5f7fb;
+
+  color: #1f2937;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+
+#root {
+  min-height: 100vh;
 }
+
+
+/* Основной контейнер */
+
+main {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 30px 20px;
+}
+
+
+/* Заголовки */
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
+  font-size: 32px;
+
+  margin-bottom: 10px;
+
+  color: #111827;
 }
+
+
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
+  margin-top: 30px;
+
+  color: #2563eb;
 }
+
+
+h3 {
+  margin-bottom: 8px;
+}
+
+
+/* Карточки теории */
+
+section {
+
+  background: white;
+
+  padding: 20px;
+
+  margin-bottom: 15px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+
+/* Текст */
+
 p {
-  margin: 0;
+
+  line-height: 1.6;
+
 }
 
-code,
-.counter {
-  font-family: var(--mono);
+
+/* Задания */
+
+.task {
+
+  background: white;
+
+  padding: 20px;
+
+  margin-top: 15px;
+
+  border-radius: 12px;
+
+}
+
+
+/* Кнопки */
+
+button {
+
+  margin-top: 15px;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+}
+
+
+button:hover {
+
+  background: #1d4ed8;
+
+}
+
+
+/* Поля ввода */
+
+input {
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  border: 1px solid #d1d5db;
+
+  font-size: 16px;
+
+}
+
+
+/* Варианты ответа */
+
+label {
+
+  display: block;
+
+  margin: 10px 0;
+
+  cursor: pointer;
+
+}
+
+
+input[type="radio"] {
+
+  margin-right: 10px;
+
+}
+.home {
+
+  text-align: center;
+
+  padding-top: 80px;
+
+}
+
+
+.subtitle {
+
+  font-size: 18px;
+
+  color: #6b7280;
+
+}
+
+
+.home-buttons {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  margin-top: 50px;
+
+}
+
+
+.home-button {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+  width: 220px;
+
+  height: 100px;
+
+
+  background: white;
+
+  border-radius: 16px;
+
+
+  color: #2563eb;
+
+  text-decoration: none;
+
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.1);
+
+
+  transition: 0.2s;
+
+}
+
+
+.home-button:hover {
+
+  transform: translateY(-5px);
+
+}
+.lesson-menu {
+
+ background:white;
+
+ margin:20px 0;
+
+ border-radius:12px;
+
+ overflow:hidden;
+
+ box-shadow:
+ 0 3px 10px rgba(0,0,0,.08);
+
+}
+
+
+
+.lesson-title {
+
+ width:100%;
+
+ display:flex;
+
+ justify-content:space-between;
+
+ align-items:center;
+
+ background:#2563eb;
+
+ color:white;
+
+ border-radius:0;
+
+}
+
+
+
+.lesson-content {
+    padding:20px;
+
+}
+.lesson-content-top {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.lesson-content div {
+
+ padding:15px;
+
+ margin-bottom:15px;
+
+ border-radius:10px;
+
+ background:#f8fafc;
+
+}
+.class-buttons {
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:20px;
+
+  margin-top:40px;
+
+}
+
+
+.class-button {
+
+  width:150px;
+
+  height:80px;
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+
+  background:white;
+
+  border-radius:15px;
+
+
+  text-decoration:none;
+
+  color:#2563eb;
+
+
+  font-size:22px;
+
+  font-weight:600;
+
+
+  box-shadow:
+  0 4px 12px rgba(0,0,0,.1);
+
+
+  transition:.2s;
+
+}
+
+
+
+.class-button:hover {
+
+ transform:translateY(-5px);
+
+}
+.practice-instructions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.practice-instructions textarea {
+  width: 60%;
+}
+.safety-block {
+  padding: 25px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  background: #f8f8f8;
+}
+
+.safety-block h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.safety-block p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.safety-button {
   display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  background: #f8f7f7;
+  color: #2563eb;
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background-color 0.2s;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.safety-button:hover {
+  background-color: #e2e2e2;
 }
