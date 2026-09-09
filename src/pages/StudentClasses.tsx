@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import HomeButton from "../components/HomeButton";
 
 const classes = [6, 7, 8, 9, 10, 11];
 
@@ -7,6 +8,7 @@ export default function StudentClasses() {
   return (
 
     <main>
+      <HomeButton />
 
       <h1>
         Абярыце клас

@@ -5,6 +5,7 @@ import safety from "../data/safety.json";
 import TheoryBlock from "../components/TheoryBlock";
 import TestBlock from "../components/TestBlock";
 import PracticeBlock from "../components/PracticeBlock";
+import HomeButton from "../components/HomeButton";
 
 
 type SafetySection = "theory" | "test" | "practice" | null;
@@ -20,6 +21,7 @@ export default function Safety() {
 
     <main>
 
+      <HomeButton />
       <h1>
         {safety.title}
       </h1>
