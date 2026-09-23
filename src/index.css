@@ -404,3 +404,15 @@ input[type="radio"] {
 .safety-button:hover {
   background-color: #e2e2e2;
 }
+img {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 24px auto;
+
+  border-radius: 8px;
+  border: 1px solid #ddd;
+
+  object-fit: contain;
+}

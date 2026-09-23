@@ -7,6 +7,7 @@ import LessonMenu from "../components/LessonMenu";
 import TheoryBlock from "../components/TheoryBlock";
 import TestBlock from "../components/TestBlock";
 import PracticeBlock from "../components/PracticeBlock";
+import HomeButton from "../components/HomeButton";
 
 
 export default function ClassLessons() {
@@ -38,7 +39,7 @@ export default function ClassLessons() {
   return (
 
     <main>
-
+      <HomeButton />
       <h1>
         {classId} клас
       </h1>

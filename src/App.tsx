@@ -1,7 +1,7 @@
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
 } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -11,19 +11,10 @@ import Teacher from "./pages/Teacher";
 import Safety from "./pages/Safety";
 
 function App() {
-  const basename =
-    window.location.hostname === "olgakruglik.github.io"
-      ? "/informatics-school"
-      : "/";
-
   return (
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
-
-        <Route
-          path="/"
-          element={<Home />}
-        />
+        <Route path="/" element={<Home />} />
 
         <Route
           path="/student"
@@ -44,7 +35,6 @@ function App() {
           path="/student/safety"
           element={<Safety />}
         />
-
       </Routes>
     </BrowserRouter>
   );
